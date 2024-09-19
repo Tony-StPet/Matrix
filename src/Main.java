@@ -12,10 +12,14 @@ public class Main {
     //   RoutineMatrix.printMatrix(matrix);
 
         //RoutineMatrix.createMatrix();
+        //RoutineMatrix.printMatrix(Matrix.inputMatrix());
 
 
-    RoutineMatrix.printMatrix(Matrix.inputMatrix());
+        //RoutineMatrix.printMatrix(RoutineMatrix.sortRowsWithBubble((Matrix.inputMatrix())));
 
-
+        int[][] test = Matrix.inputMatrix();
+        RoutineMatrix.printMatrix(test);
+        RoutineMatrix.searchInMatrix(test);
+        ;;;
     }
 }
