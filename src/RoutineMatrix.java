@@ -17,23 +17,49 @@ public class RoutineMatrix {
     }
 
     // Алгоритм сортировки пузырьком
-    public static void bubbleSort(int[][] mas) {
+    public static int[][] sortRowsWithBubble(int[][] matrix) {
+        int rows = matrix.length;
+        int column = matrix[0].length;
+        for (int i = 0; i < rows; i++) {
+            bubbleSort(matrix[i]);
+        }
 
+        return matrix;
+    }
 
-        for (int i = 0; i < mas.length-1; i++) {
-            int end = mas.length - i;
-            for (int j = 0; j < end-1; j++) {
-                if (mas[j] > mas[j+1])
-                    RoutineMatrix.swapTwoElements(mas, j, j+1);
+    private static void bubbleSort(int[] arr) {
+        int end = arr.length;
+        for (int i = 0; i < end - 1; i++) {
+            for (int j = 0; j < end - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // Меняем элементы местами
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
             }
         }
     }
-    public static void swapTwoElements(int[] mas, int i, int j){
-        int tmp = mas[i];
-        mas[i] = mas[j];
-        mas[j] = tmp;
-    }
 
+    public static boolean searchInMatrix (int[][] m){
+        System.out.println("  ");
+        System.out.printf("введите искомое числов матрице:: ");
+        boolean found = false;
+        Scanner scanner = new Scanner(System.in);
+        int search = scanner.nextInt();
+        for (int i = 0; i < m.length; i++) {                // цикл по строкам матрицы
+            for (int j = 0; j < m[i].length; j++) {         // цикл по ячейкам строки в матрице
+                if (m[i][j]==search){
+                    System.out.printf("Число %d найдено под координатами [%d][%d]\n", search, i, j);
+                    found = true;}
+            }
+        }
+        System.out.println();
+        if (!found) {
+            System.out.printf("Число %d не найдено в матрице\n", search);
+        }
+        return found;
+    }
 
 
 
