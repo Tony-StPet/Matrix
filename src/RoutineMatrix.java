@@ -61,8 +61,51 @@ public class RoutineMatrix {
         return found;
     }
 
+    public static int[][] transportMatrix(int [][] matrix) {
 
+        int rows = matrix.length;
+        int column = matrix[0].length;
+        int[][] transMatrix = new int [column][rows];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < column; j++) {
+                transMatrix[j][i] = matrix[i][j];
+            }
+        }
+        System.out.println();
+        printMatrix(transMatrix);
+        return transMatrix;
+    }
 
+    public static int sumAllElem (int[][] m){
+        int sumEl = 0;
+
+        for (int [] row : m) {                // цикл по строкам матрицы
+            //System.out.println("строка матрицы " + i + ": " + Arrays.toString(m[i]));
+            for (int j : row) {         // цикл по ячейкам строки в матрице
+                sumEl +=j;
+            }
+        }
+        System.out.println();
+        System.out.println("сумма элементов в матрице:: " + sumEl);
+        return sumEl;
+    }
+
+    public static int indexOfMax(int[][] m){
+        int n = m[0][0];
+        int end = m[0].length;
+        int numberOfMaximum = 0;
+        for (int i = 1; i < m.length; i++) {
+            for (int j = 0; j<end; j++){
+            if(n < m[i][j])
+            {
+                n = m[i][j];
+                numberOfMaximum = i;}
+            }
+        }
+        System.out.println();
+        System.out.println("макс эл в матрице на строке:: " + numberOfMaximum);
+        return numberOfMaximum;
+    }
 }
 
 

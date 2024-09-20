@@ -19,7 +19,9 @@ public class Main {
 
         int[][] test = Matrix.inputMatrix();
         RoutineMatrix.printMatrix(test);
-        RoutineMatrix.searchInMatrix(test);
-        ;;;
+        RoutineMatrix.transportMatrix(test);
+//        RoutineMatrix.searchInMatrix(test);
+        RoutineMatrix.sumAllElem(test);
+        RoutineMatrix.indexOfMax(test);
     }
 }
