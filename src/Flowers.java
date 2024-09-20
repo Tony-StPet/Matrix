@@ -21,14 +21,14 @@ public class Flowers {
         int day = scanner.nextInt();
         for (int k = 0; k < day; k++) {
 
-            swapTwoElements(flower, flower[2], flower[1]);
-            swapTwoElements(flower, flower[0], flower[1]);
+            swapTwoElements(flower, 2, 1);
+            swapTwoElements(flower, 0, 1);
         }
-
+        printArray(flower);
 
     }
 
-    public static void swapTwoElements(char[] mas, char i, char j) {
+    public static void swapTwoElements(char[] mas, int i, int j) {
         char tmp = mas[i];
         mas[i] = mas[j];
         mas[j] = tmp;
