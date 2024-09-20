@@ -9,13 +9,17 @@ public class Main {
 
         //matrix[2][1]= 99;
         //matrix[0][0]= 321;
-    //   RoutineMatrix.printMatrix(matrix);
+        //   RoutineMatrix.printMatrix(matrix);
 
         //RoutineMatrix.createMatrix();
+        //RoutineMatrix.printMatrix(Matrix.inputMatrix());
 
 
-    RoutineMatrix.printMatrix(Matrix.inputMatrix());
+        //RoutineMatrix.printMatrix(RoutineMatrix.sortRowsWithBubble((Matrix.inputMatrix())));
 
-
+//        int[][] test = Matrix.inputMatrix();
+//        RoutineMatrix.printMatrix(test);
+//        RoutineMatrix.searchInMatrix(test);
+        Flowers.chengeArray();
     }
 }
